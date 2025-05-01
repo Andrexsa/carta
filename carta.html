@@ -25,6 +25,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       max-width: 400px;
       width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     h1 {
@@ -41,7 +43,7 @@
 
     .message.visible {
       opacity: 1;
-      max-height: 500px;
+      max-height: 1000px;
     }
 
     button {
@@ -60,7 +62,10 @@
     }
 
     .foto {
-      max-width: 100%;
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
       border-radius: 15px;
       margin-bottom: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -73,13 +78,11 @@
       transform: scale(1);
       opacity: 1;
     }
-
-    
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>💌 Carta de Amor</h1>
+    <h1>💌 Carta para sofi</h1>
     <button onclick="mostrarMensaje()">Leer Carta</button>
     <div class="message" id="mensaje">
       <img src="tu_imagen.jpeg" alt="Foto especial" class="foto" />
