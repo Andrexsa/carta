@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta de Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ff4b5c, #3a86ff);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 1s ease-in-out, max-height 1s ease-in-out;
+    }
+
+    .message.visible {
+      opacity: 1;
+      max-height: 500px;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #ff4b5c;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe6e9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💌 Carta de Amor</h1>
+    <button onclick="mostrarMensaje()">Leer Carta</button>
+    <div class="message" id="mensaje">
+      <p>
+        Desde el primer momento en que te vi, supe que había algo especial entre nosotros.<br>
+        Esta carta es solo una pequeña muestra del inmenso cariño que siento por ti.<br>
+        Gracias por ser parte de mi vida. ❤️
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      mensaje.classList.toggle('visible');
+    }
+  </script>
+</body>
+</html>
